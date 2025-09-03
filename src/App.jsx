@@ -1,13 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import EventDetail from "./pages/EventDetail";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/nav/Navbar";
 import Dashboard from "./pages/Dashbord";
+import "./Style.css";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <Routes>
         <Route path="/signup" element={<Signup />} />
@@ -15,6 +16,6 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/event/:id" element={<EventDetail />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
