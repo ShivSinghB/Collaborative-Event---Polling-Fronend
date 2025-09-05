@@ -1,59 +1,8 @@
-import { useState } from "react";
-import API from "../api";
-import { useNavigate } from "react-router-dom";
+// src/pages/Login.jsx
+import LoginForm from '../components/auth/LoginForm';
 
-export default function Login() {
-  const [form, setForm] = useState({ email: "", password: "" });
-  const [error, setError] = useState("");
-  const navigate = useNavigate();
+const Login = () => {
+  return <LoginForm />;
+};
 
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const { data } = await API.post("/auth/login", form);
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("userId", data.user.id);
-      navigate("/dashboard");
-    } catch (err) {
-      console.error(err.response?.data);
-      setError(err.response?.data?.message || "Login failed");
-    }
-  };
-
-  return (
-    <div className="flex justify-center items-center h-screen">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-xl shadow-md w-full max-w-sm"
-      >
-        <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
-        {error && <p className="text-red-500 mb-2">{error}</p>}
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
-          className="w-full p-2 border rounded-lg mb-3"
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={handleChange}
-          className="w-full p-2 border rounded-lg mb-3"
-        />
-        <button
-          type="submit"
-          className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700"
-        >
-          Login
-        </button>
-      </form>
-    </div>
-  );
-}
+export default Login;
