@@ -52,18 +52,18 @@
 git clone https://github.com/ShivSinghB/Collaborative-Event---Polling-Fronend.git
 cd Collaborative-Event---Polling-Fronend
 
-2. Install Dependencies
+### 2. Install Dependencies
 npm install
 
-3. Create .env File
+### 3. Create .env File
 VITE_API_BASE_URL=http://localhost:5000/api
 
-4. Start the Dev Server
+### 4. Start the Dev Server
 npm run dev
 
 App will run at: http://localhost:5173
 
-🔁 Axios Setup (src/api.js)
+### 🔁 Axios Setup (src/api.js)
 import axios from "axios";
 
 const API = axios.create({
@@ -78,7 +78,7 @@ API.interceptors.request.use((req) => {
 
 export default API;
 
-📁 Folder Structure
+### 📁 Folder Structure
 CEPFONTEND/
 ├── public/               # Static assets
 ├── src/
@@ -97,10 +97,10 @@ CEPFONTEND/
 ├── tailwind.config.js    # Tailwind config
 └── package.json
 
-👨‍💻 Author
+### 👨‍💻 Author
 
 Shiv Baghel
-🔗 GitHub Profile
+🔗 [GitHub Profile](https://github.com/ShivSinghB)
 
 
 ---
