@@ -5,10 +5,10 @@ import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import Layout from './components/layout/Layout';
 import Login from './pages/Login';
-import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import CreateEvent from './pages/CreateEvent';
 import EventDetail from './pages/EventDetail';
+import Signup from './pages/Signup';
 
 function App() {
   return (
