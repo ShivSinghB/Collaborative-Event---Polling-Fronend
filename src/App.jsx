@@ -7,7 +7,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import CreateEvent from './pages/CreateEvent';
 import EventDetail from './pages/EventDetail';
-import Signup from './pages/Signup';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Toaster position="top-right" />
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/signup" element={<Register />} />
           <Route element={<ProtectedRoute />}>
             <Route element={<Layout />}>
               <Route path="/dashboard" element={<Dashboard />} />
