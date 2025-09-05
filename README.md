@@ -1,78 +1,86 @@
+🎉 EventPoll Pro – Frontend
 
----
 
-### **Frontend README.md** (`Collaborative-Event---Polling-Fronend/README.md`)
 
-```markdown
-# 🎉 EventPoll Pro – Frontend
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-4+-pink.svg)](https://vitejs.dev/)
 
-> Interactive frontend for **EventPoll Pro** – a collaborative platform to create events and participate in polls.
 
----
 
-## 🔗 GitHub Repository
 
-[Frontend Repo](https://github.com/ShivSinghB/Collaborative-Event---Polling-Fronend)
+A modern frontend for EventPoll Pro – a collaborative event and polling platform built with React, Tailwind, and Vite.
 
----
+🔗 GitHub Repository
 
-## 🚀 Features
+🔗 Frontend Repository
 
-### **Authentication**
-- Signup and Login pages
-- JWT token stored in `localStorage` for API calls
+🚀 Features
+🧾 Authentication
 
-### **Dashboard**
-- List of events created by the user
-- List of events the user is invited to
+Signup / Login with JWT-based auth
 
-### **Poll Interaction**
-- Vote in polls for invited events
-- View poll results dynamically
+Token stored securely in localStorage
 
-### **Responsive Navbar**
-- Different navbar for guest vs logged-in users
-- Mobile-friendly sidebar with GSAP animations
+Protected routes based on login state
 
----
+📅 Dashboard
 
-## ⚙️ Tech Stack
+See events you created
 
-- React + Vite
-- TailwindCSS + GSAP for UI animations
-- Axios for API calls
-- React Router v7
+See events you're invited to
 
----
+Real-time UI updates on changes
 
-## 🛠 Setup Instructions
+🗳️ Polling System
 
-1. **Clone the repository**
+Participate in event polls
 
-```bash
+Visualize poll results live
+
+Only invited users can vote
+
+🧭 Navigation
+
+Responsive navbar with animation
+
+Sidebar toggle for mobile view
+
+Smooth GSAP transitions
+
+⚙️ Tech Stack
+Technology	Usage
+React 19	Frontend framework
+Vite 7	Fast dev server + bundler
+TailwindCSS	Utility-first CSS framework
+GSAP	Animations
+Axios	API calls
+React Router	Client-side routing
+🛠️ Setup Instructions
+1️⃣ Clone the Repository
 git clone https://github.com/ShivSinghB/Collaborative-Event---Polling-Fronend.git
 cd Collaborative-Event---Polling-Fronend
 
-2. Install dependencies
-
+2️⃣ Install Dependencies
 npm install
 
-3. Create .env file in root:
+3️⃣ Create a .env File
 
-VITE_API_BASE_URL=http://localhost:5000/api
+In the root directory:
+
+VITE_API_BASE_URL=https://your-backend-url.onrender.com/api
 
 
-4. Run locally
+✅ Replace with your actual backend URL.
 
-5. npm run dev
+4️⃣ Run Locally
+npm run dev
 
-App will run at: http://localhost:5173
+
+Visit: http://localhost:5173
 
 🔁 Axios Setup
+
+📄 src/api.js
+
 import axios from "axios";
 
 const API = axios.create({
@@ -89,32 +97,29 @@ export default API;
 
 📂 Folder Structure
 CEPFONTEND/
-├─ public/               # Static public files
+├─ public/               # Static files
 ├─ src/
 │  ├─ assets/            # Images and icons
-│  ├─ components/        # Reusable UI components
-│  ├─ context/           # Global state (Auth, etc.)
-│  ├─ pages/             # Route-level pages (Signup, Dashboard, etc.)
-│  ├─ services/          # API functions (axios)
-│  ├─ api.js             # Axios instance setup
-│  ├─ App.jsx            # App with routes
+│  ├─ components/        # Navbar, forms, UI
+│  ├─ context/           # Auth context
+│  ├─ pages/             # Login, Signup, Dashboard, etc.
+│  ├─ services/          # API functions
+│  ├─ api.js             # Axios setup
+│  ├─ App.jsx            # Main app + routes
 │  ├─ main.jsx           # Entry point
-│  ├─ index.css          # Tailwind base styles
+│  ├─ index.css          # Global styles (Tailwind)
 │  └─ Style.css          # Custom styles
-├─ .env                  # Environment variables
-├─ vite.config.js        # Vite config
-├─ tailwind.config.js    # Tailwind config
+├─ .env
+├─ vite.config.js
+├─ tailwind.config.js
 └─ package.json
 
+👤 Author
 
-🧑‍💻 Author
+Shiv Baghel
+📎 GitHub – ShivSinghB
 
-Shiv Baghel – [GitHub](https://github.com/ShivSinghB)
+💬 Feedback or Contributions?
 
----
-
-Shiv, these two README files are now **well-formatted, professional, and readable** with proper badges, syntax highlighting, and your GitHub links.  
-
-If you want, I can also **add a beautiful visual diagram** for `User ↔ Event ↔ Poll` in the backend README to make it even more polished.  
-
-Do you want me to do that next?
+Feel free to submit an Issue
+ or a PR! Your contributions make this better 💜
