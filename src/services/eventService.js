@@ -40,6 +40,21 @@ const eventService = {
   searchUsers: async (query) => {
     const response = await API.get(`/users/search?q=${query}`);
     return response.data.users;
+  },
+
+   getNotifications: async () => {
+    const response = await API.get('/notifications');
+    return response.data.notifications;
+  },
+
+  markNotificationAsRead: async (notificationId) => {
+    const response = await API.put(`/notifications/${notificationId}/read`);
+    return response.data;
+  },
+
+  markAllNotificationsAsRead: async () => {
+    const response = await API.put('/notifications/read-all');
+    return response.data;
   }
 };
 
