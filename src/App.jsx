@@ -1,5 +1,4 @@
-// src/App.jsx
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import {  Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/auth/ProtectedRoute';
@@ -12,7 +11,7 @@ import Signup from './pages/Signup';
 
 function App() {
   return (
-    <Router>
+  <>
       <AuthProvider>
         <Toaster position="top-right" />
         <Routes>
@@ -28,7 +27,7 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" />} />
         </Routes>
       </AuthProvider>
-    </Router>
+    </>
   );
 }
 
